@@ -1,6 +1,6 @@
 {
     "name": "ute",
-    "description": "Common utility layer on top of ExpressJS.",
+    "description": "ExpressJS commons.",
     "keywords": ["express"],
     "version": "0.0.1",
     "homepage" : "http://github.com/cliffano/ute",
