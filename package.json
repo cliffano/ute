@@ -7,15 +7,8 @@
     "author": "Cliffano Subagio <blah@cliffano.com> (http://blog.cliffano.com)",
     "repository": { "type": "git", "url": "http://github.com/cliffano/ute.git" },
     "bugs": { "web": "http://github.com/cliffano/ute/issues" },
-    "directories": { "lib": "./lib" },
-    "dependencies": {
-          "connect": ">= 1.4.2",
-          "connect-assetmanager": ">= 0.0.20",
-          "connect-assetmanager-handlers": ">= 0.0.17",
-          "ejs": ">= 0.4.2",
-          "express": ">= 2.3.9",
-          "log4js": ">= 0.2.5"
-    },
+    "main": "./lib/ute",
+    "dependencies": { "connect": "1.6.0", "connect-assetmanager": "0.0.20", "connect-assetmanager-handlers": "0.0.17", "ejs": "0.4.3", "express": "2.4.3", "log4js": "0.2.6", "underscore": "1.1.7" },
     "engines": { "node": ">= 0.4.0" },
     "licenses" : [{ "type": "MIT", "url": "http://github.com/cliffano/ute/raw/master/LICENSE" }]
 }
