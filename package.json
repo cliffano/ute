@@ -9,7 +9,7 @@
     "bugs": { "web": "http://github.com/cliffano/ute/issues" },
     "main": "./lib/ute",
     "directories": { "lib": "./lib" },
-    "dependencies": { "connect": "1.6.0", "connect-assetmanager": "0.0.20", "connect-assetmanager-handlers": "0.0.17", "ejs": "0.4.3", "express": "2.4.3", "log4js": "0.2.6", "underscore": "1.1.7" },
+    "dependencies": { "cluster": "0.7.3", "connect": "1.6.0", "connect-assetmanager": "0.0.20", "connect-assetmanager-handlers": "0.0.17", "ejs": "0.4.3", "express": "2.4.3", "log4js": "0.2.6", "underscore": "1.1.7" },
     "engines": { "node": ">= 0.4.0" },
     "licenses" : [{ "type": "MIT", "url": "http://github.com/cliffano/ute/raw/master/LICENSE" }]
 }
