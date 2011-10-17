@@ -6,7 +6,7 @@
     "homepage" : "http://github.com/cliffano/ute",
     "author": "Cliffano Subagio <blah@cliffano.com> (http://blog.cliffano.com)",
     "repository": { "type": "git", "url": "http://github.com/cliffano/ute.git" },
-    "bugs": { "web": "http://github.com/cliffano/ute/issues" },
+    "bugs": { "url": "http://github.com/cliffano/ute/issues" },
     "main": "./lib/ute",
     "directories": { "lib": "./lib" },
     "dependencies": { "cluster": "0.7.3", "connect": "1.6.0", "connect-assetmanager": "0.0.20", "connect-assetmanager-handlers": "0.0.17", "ejs": "0.4.3", "express": "2.4.3", "log4js": "0.2.6", "underscore": "1.1.7" },
