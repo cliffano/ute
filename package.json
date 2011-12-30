@@ -1,6 +1,6 @@
 {
   "name": "ute",
-  "description": "Common layer on top of ExpressJS web framework.",
+  "description": "Common layer on top of Express node web framework.",
   "keywords": [
     "express",
     "web framework"
