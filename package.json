@@ -9,6 +9,9 @@
   "homepage": "http://github.com/cliffano/ute",
   "author": "Cliffano Subagio <blah@cliffano.com> (http://blog.cliffano.com)",
   "main": "./lib/ute",
+  "scripts": {
+    "test": "vows --spec `find test -name \"*.js\"`"
+  },
   "repository": {
     "type": "git",
     "url": "http://github.com/cliffano/ute.git"
