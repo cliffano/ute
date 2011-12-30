@@ -48,11 +48,12 @@ Specify the routes in lib/routes.js :
     exports.routes = routes;
 
 Place all image files under public/images/, each image is accessible via path /images/imagefile.ext .
+
 Place all JavaScript files under public/scripts/, each script is accessible via path /scripts/scriptfile.js . All scripts are merged, and accessible via path /scripts/appname.js .
+
 Place all CSS files under public/styles/, each style is accessible via path /styles/stylefile.css . All styles are merged and minified, and accessible via path /styles/appname.css .
 
-Specify page not found error 404 page in views/404.html .
-Specify unexpected error page in views/500.html .
+Specify page not found error 404 page in views/404.html , and unexpected error page in views/500.html .
 
 Start the app:
 
