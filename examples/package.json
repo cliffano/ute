@@ -1,0 +1,11 @@
+{
+  "name": "appname",
+  "description": "Ute demo application",
+  "version": "0.0.0",
+  "dependencies": {
+    "ute": "0.0.1"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  }
+}

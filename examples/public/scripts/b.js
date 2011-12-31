@@ -1,0 +1,1 @@
+document.write("Happy New Year 2012");
