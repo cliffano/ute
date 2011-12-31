@@ -49,12 +49,12 @@ vows.describe('ute').addBatch({
       ute.run();
       assert.equal(checks.port, 3000);
       assert.isFunction(checks.configApp.listen);
-      assert.equal(checks.configOpts.name, 'uteapp');
+      assert.equal(checks.configOpts.name, 'appname');
       assert.equal(checks.configOpts.port, 3000);
       assert.isEmpty(checks.configOpts.routes);
       assert.equal(checks.configApp, checks.routeApp);
       assert.equal(checks.configOpts, checks.routeOpts);
-      assert.equal(checks.message, 'Starting application uteapp on port 3000 in env development');
+      assert.equal(checks.message, 'Starting application appname on port 3000 in env development');
     },
     'custom options should be used when custom options are specified': function (topic) {
       var checks = {},
