@@ -3,6 +3,17 @@ Ute ![http://travis-ci.org/cliffano/ute](https://secure.travis-ci.org/cliffano/u
 
 Ute is a common layer on top of Express node web framework.
 
+Installation
+------------
+
+    npm install ute
+
+or specify it as a dependency in package.json file:
+
+    "dependencies": {
+      "ute": "0.0.x"
+    }
+
 Usage
 -----
 
@@ -24,7 +35,7 @@ Set up Ute in appname.js :
       Ute = require('ute').Ute,
       ute = new Ute({
         name: 'appname',
-        port: 8888,
+        port: 3000,
         routes: routes
       });
 
@@ -47,21 +58,22 @@ Specify the routes in lib/routes.js :
 
     exports.routes = routes;
 
-Place all image files under public/images/, each image is accessible via path /images/imagefile.ext .
+Static resources:
 
-Place all JavaScript files under public/scripts/, each script is accessible via path /scripts/scriptfile.js . All scripts are merged, and accessible via path /scripts/appname.js .
+* place all image files at public/images/, each image will be accessible at http://host:port/images/imagefile.ext
+* place all JavaScript files at public/scripts/, each script will be accessible at http://host:port/scripts/scriptfile.js , merged version of all scripts will be accessible at http://host:port/scripts/appname.js
+* place all CSS files at public/styles/, each style will be accessible at http://host:port/styles/stylefile.css , merged and minified version of all styles will be accessible at http://host:port/styles/appname.css
 
-Place all CSS files under public/styles/, each style is accessible via path /styles/stylefile.css . All styles are merged and minified, and accessible via path /styles/appname.css .
+Error pages:
 
-Specify page not found error 404 page in views/404.html , and unexpected error page in views/500.html .
+* specify page not found error in views/404.html
+* and unexpected error in views/500.html
 
 Start the app:
 
     node appname.js
-  
-Or if you have [Bob](https://github.com/cliffano/bob) installed:
 
-    bob start
+and it's accessible at http://localhost:3000
 
 Colophon
 --------
