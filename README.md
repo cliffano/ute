@@ -61,8 +61,10 @@ Specify the routes in lib/routes.js :
 Static resources:
 
 * place all image files at public/images/, each image will be accessible at http://host:port/images/imagefile.ext
-* place all JavaScript files at public/scripts/, each script will be accessible at http://host:port/scripts/scriptfile.js , merged version of all scripts will be accessible at http://host:port/scripts/appname.js
-* place all CSS files at public/styles/, each style will be accessible at http://host:port/styles/stylefile.css , merged and minified version of all styles will be accessible at http://host:port/styles/appname.css
+* place all JavaScript files at public/scripts/, each script will be accessible at http://host:port/scripts/scriptfile.js
+* merged version of all scripts will be accessible at http://host:port/scripts/appname.js
+* place all CSS files at public/styles/, each style will be accessible at http://host:port/styles/stylefile.css
+* merged and minified version of all styles will be accessible at http://host:port/styles/appname.css
 
 Error pages:
 
