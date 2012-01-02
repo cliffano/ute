@@ -77,6 +77,12 @@ Start the app:
 
 and it's accessible at http://localhost:3000
 
+For custom app config / set up, you can pass a hook function which will be executed after Ute's built-in set up and before the app starts listening on the specified port:
+
+    ute.run(function (app, express) {
+      ...
+    }); 
+
 Colophon
 --------
 

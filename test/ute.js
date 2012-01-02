@@ -13,8 +13,14 @@ vows.describe('ute').addBatch({
                 return {
                   listen: function (port) {
                     checks.port = port;
+                  },
+                  hook: function () {
+                    checks.appHookCallCount = 1;
                   }
                 };
+              },
+              hook: function () {
+                checks.expressHookCallCount = 1;
               }
             },
             './engine': {
@@ -55,6 +61,8 @@ vows.describe('ute').addBatch({
       assert.equal(checks.configApp, checks.routeApp);
       assert.equal(checks.configOpts, checks.routeOpts);
       assert.equal(checks.message, 'Starting application appname on port 3000 in env development');
+      assert.isUndefined(checks.expressHoookCallCount);
+      assert.isUndefined(checks.appHoookCallCount);
     },
     'custom options should be used when custom options are specified': function (topic) {
       var checks = {},
@@ -75,6 +83,18 @@ vows.describe('ute').addBatch({
       assert.equal(checks.configApp, checks.routeApp);
       assert.equal(checks.configOpts, checks.routeOpts);
       assert.equal(checks.message, 'Starting application dummyapp on port 8888 in env development');
+      assert.isUndefined(checks.expressHoookCallCount);
+      assert.isUndefined(checks.appHoookCallCount);
+    },
+    'hook function should be executed': function (topic) {
+      var checks = {},
+        ute = new topic(checks).Ute();
+      ute.run(function (app, express) {
+        app.hook();
+        express.hook();
+      });
+      assert.equal(checks.appHookCallCount, 1);
+      assert.equal(checks.expressHookCallCount, 1);
     }
   }
 }).exportTo(module);
