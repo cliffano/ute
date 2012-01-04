@@ -27,6 +27,7 @@
     "connect": "1.8.5",
     "connect-assetmanager": "0.0.24",
     "connect-assetmanager-handlers": "0.0.17",
+    "dateformat": "1.0.2-1.2.3",
     "ejs": "0.6.1",
     "express": "2.5.2",
     "underscore": "1.2.3"
