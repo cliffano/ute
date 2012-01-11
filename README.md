@@ -1,4 +1,4 @@
-Ute ![http://travis-ci.org/cliffano/ute](https://secure.travis-ci.org/cliffano/ute.png?branch=master)
+Ute [![http://travis-ci.org/cliffano/ute](https://secure.travis-ci.org/cliffano/ute.png?branch=master)](http://travis-ci.org/cliffano/ute)
 ---
 
 Ute is a common layer on top of Express node web framework.
