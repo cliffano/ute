@@ -1,4 +1,5 @@
 var assert = require('assert'),
+  jscoverageHack = require('../lib/ute'),
   sandbox = require('sandboxed-module'),
   vows = require('vows');
 
