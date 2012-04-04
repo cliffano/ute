@@ -1,4 +1,7 @@
-### 0.0.3 (SNAPSHOT)
+### 0.0.4 (SNAPSHOT)
+* 
+
+### 0.0.3 
 * Handle process uncaught exception, log error instead of exit
 
 ### 0.0.2
