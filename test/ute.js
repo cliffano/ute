@@ -38,12 +38,19 @@ vows.describe('ute').addBatch({
           globals: {
             console: {
               log: function (message) {
-                checks.message = message;
+                checks.logMessage = message;
+              },
+              error: function (message) {
+                checks.errorMessage = message;
               }
             },
             process: {
               env: {
                 NODE_ENV: 'development'
+              },
+              on: function  (type, cb) {
+                checks.eventType = type;
+                cb(new Error('Some uncaught exception occured.'));
               }
             }
           }
@@ -61,7 +68,7 @@ vows.describe('ute').addBatch({
       assert.isEmpty(checks.configOpts.routes);
       assert.equal(checks.configApp, checks.routeApp);
       assert.equal(checks.configOpts, checks.routeOpts);
-      assert.equal(checks.message, 'Starting application appname on port 3000 in env development');
+      assert.equal(checks.logMessage, 'Starting application appname on port 3000 in env development');
       assert.isUndefined(checks.expressHoookCallCount);
       assert.isUndefined(checks.appHoookCallCount);
     },
@@ -83,7 +90,7 @@ vows.describe('ute').addBatch({
       assert.equal(checks.configOpts.routes.length, 2);
       assert.equal(checks.configApp, checks.routeApp);
       assert.equal(checks.configOpts, checks.routeOpts);
-      assert.equal(checks.message, 'Starting application dummyapp on port 8888 in env development');
+      assert.equal(checks.logMessage, 'Starting application dummyapp on port 8888 in env development');
       assert.isUndefined(checks.expressHoookCallCount);
       assert.isUndefined(checks.appHoookCallCount);
     },
@@ -96,6 +103,13 @@ vows.describe('ute').addBatch({
       });
       assert.equal(checks.appHookCallCount, 1);
       assert.equal(checks.expressHookCallCount, 1);
+    },
+    'uncaught exception should be handled and error message logged': function (topic) {
+      var checks = {},
+        ute = new topic(checks).Ute();
+      ute.run();
+      assert.equal(checks.eventType, 'uncaughtException');
+      assert.equal(checks.errorMessage, 'Uncaught exception: Some uncaught exception occured.');
     }
   }
 }).exportTo(module);
