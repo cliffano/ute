@@ -1,7 +1,4 @@
-### 0.0.4 (SNAPSHOT)
-* 
-
-### 0.0.3 
+### 0.0.3 (SNAPSHOT)
 * Handle process uncaught exception, log error instead of exit
 * Static asset only includes resources with file.ext format
 
