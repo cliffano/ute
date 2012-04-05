@@ -31,7 +31,7 @@ vows.describe('engine').addBatch({
                   if (path === './public/scripts') {
                     files = ['a.js', 'b.js'];
                   } else if (path === './public/styles') {
-                    files = ['a.css', 'b.css'];
+                    files = ['a.css', 'somedir', 'b.css'];
                   }
                   return files;
                 }

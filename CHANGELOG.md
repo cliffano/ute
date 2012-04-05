@@ -3,6 +3,7 @@
 
 ### 0.0.3 
 * Handle process uncaught exception, log error instead of exit
+* Static asset only includes resources with file.ext format
 
 ### 0.0.2
 * Add custom express app config / set up hook
