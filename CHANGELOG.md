@@ -1,4 +1,6 @@
-### 0.0.4 (SNAPSHOT)
+### 0.0.5 (SNAPSHOT)
+* 
+### 0.0.4
 * Upgrade all deps to latest, Express to v2.5.9
 * Bump min node engine requirement to v0.6
 
