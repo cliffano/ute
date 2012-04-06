@@ -1,5 +1,5 @@
 ### 0.0.4 (SNAPSHOT)
-* 
+* Requires Node.js v0.6.x or newer
 
 ### 0.0.3 
 * Handle process uncaught exception, log error instead of exit
