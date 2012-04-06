@@ -1,5 +1,6 @@
 ### 0.0.4 (SNAPSHOT)
-* Requires Node.js v0.6.x or newer
+* Upgrade all deps to latest, Express to v2.5.9
+* Bump min node engine requirement to v0.6
 
 ### 0.0.3 
 * Handle process uncaught exception, log error instead of exit
