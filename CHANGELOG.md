@@ -1,4 +1,7 @@
-### 0.0.5 (SNAPSHOT)
+### 0.0.6 (SNAPSHOT)
+*
+
+### 0.0.5
 * Upgrade connect-assetmanager to v0.0.27 to serve 304s on unmodified static resources (JavaScript, CSS, images)
  
 ### 0.0.4
