@@ -22,7 +22,13 @@ vows.describe('engine').addBatch({
                   return dir;
                 },
                 'errorHandler': function () {
-                  checks.errorHandlerCallCount = 1;
+                  checks.isErrorHandlerCalled = true;
+                },
+                'methodOverride': function () {
+                  checks.isMethodOverrideCalled = true;
+                },
+                'bodyParser': function () {
+                  checks.isBodyParserCalled = true;
                 }
               },
               fs: {
@@ -42,7 +48,7 @@ vows.describe('engine').addBatch({
               fn();
             },
             error: function (cb) {
-              checks.errorCallCount = 1;
+              checks.isConfigErrorCalled = true;
             },
             register: function (ext, templateEngine) {
               checks.ext = ext;
@@ -63,8 +69,8 @@ vows.describe('engine').addBatch({
         var checks = { resources: [] };
         topic(checks);
         assert.equal(checks.ext, '.html');
-        assert.equal(checks.errorHandlerCallCount, 1);
-        assert.equal(checks.errorCallCount, 1);
+        assert.isTrue(checks.isErrorHandlerCalled);
+        assert.isTrue(checks.isConfigErrorCalled);
         assert.equal(checks.resources.length, 3);
         assert.equal(checks.resources[0].path, '/images');
         assert.equal(checks.resources[0].dir, './public/images/');
@@ -72,6 +78,12 @@ vows.describe('engine').addBatch({
         assert.equal(checks.resources[1].dir, './public/scripts/');
         assert.equal(checks.resources[2].path, '/styles');
         assert.equal(checks.resources[2].dir, './public/styles/');
+      },
+      'then POST data should be parseable': function (topic) {
+        var checks = { resources: [] };
+        topic(checks);
+        assert.isTrue(checks.isMethodOverrideCalled);
+        assert.isTrue(checks.isBodyParserCalled);
       }
     },
     'when route has empty routes': {
