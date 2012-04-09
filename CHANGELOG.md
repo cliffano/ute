@@ -1,9 +1,12 @@
-### 0.0.5 (SNAPSHOT)
+### 0.0.6 (SNAPSHOT)
 * Add request body parsing for POST data
 * Add handlers module for convenient error response handling
 * Add isoToLocale util function
 * Expose all static resources instead of individual images, scripts, and styles
 
+### 0.0.5
+* Upgrade connect-assetmanager to v0.0.27 to serve 304s on unmodified static resources (JavaScript, CSS, images)
+ 
 ### 0.0.4
 * Upgrade all deps to latest, Express to v2.5.9
 * Bump min node engine requirement to v0.6
