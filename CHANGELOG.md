@@ -1,5 +1,7 @@
 ### 0.0.5 (SNAPSHOT)
 * Add request body parsing for POST data
+* Add handlers module for convenient error response handling
+* Add isoToLocale util function
 
 ### 0.0.4
 * Upgrade all deps to latest, Express to v2.5.9
