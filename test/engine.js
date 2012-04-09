@@ -71,13 +71,9 @@ vows.describe('engine').addBatch({
         assert.equal(checks.ext, '.html');
         assert.isTrue(checks.isErrorHandlerCalled);
         assert.isTrue(checks.isConfigErrorCalled);
-        assert.equal(checks.resources.length, 3);
-        assert.equal(checks.resources[0].path, '/images');
-        assert.equal(checks.resources[0].dir, './public/images/');
-        assert.equal(checks.resources[1].path, '/scripts');
-        assert.equal(checks.resources[1].dir, './public/scripts/');
-        assert.equal(checks.resources[2].path, '/styles');
-        assert.equal(checks.resources[2].dir, './public/styles/');
+        assert.equal(checks.resources.length, 1);
+        assert.equal(checks.resources[0].path, '/');
+        assert.equal(checks.resources[0].dir, './public/');
       },
       'then POST data should be parseable': function (topic) {
         var checks = { resources: [] };
