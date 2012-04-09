@@ -1,4 +1,7 @@
-### 0.0.6 (SNAPSHOT)
+### 0.0.7 (SNAPSHOT)
+* 
+
+### 0.0.6
 * Add request body parsing for POST data
 * Add handlers module for convenient error response handling
 * Add isoToLocale util function
