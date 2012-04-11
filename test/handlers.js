@@ -35,6 +35,9 @@ vows.describe('handlers').addBatch({
       'and error message should be passed as locals message': function (checks) {
         assert.equal(checks.params.locals.message, 'dummy error');
       },
+      'and status code 500 should be passed': function (checks) {
+        assert.equal(checks.params.status, 500);
+      },
       'and default layout should be set': function (checks) {
         assert.isTrue(checks.params.layout);
       },
@@ -72,7 +75,7 @@ vows.describe('handlers').addBatch({
         new topic(mocks, checks).json(
           new Error('dummy error'),
           {
-            send: function (data, code) {
+            json: function (data, code) {
               checks.data = data;
               checks.code = code;
             }
@@ -84,8 +87,8 @@ vows.describe('handlers').addBatch({
       'then error message should be logged to console': function (checks) {
         assert.equal(checks.errorMessage, 'Error: dummy error');
       },
-      'and response should have status code 200': function (checks) {
-        assert.equal(checks.code, 200);
+      'and response should have status code 500': function (checks) {
+        assert.equal(checks.code, 500);
       },
       'and response data should contain JSON string': function (checks) {
         assert.equal(checks.data, '{"status":"error","message":"dummy error"}');
