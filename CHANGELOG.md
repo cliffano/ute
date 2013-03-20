@@ -1,5 +1,5 @@
-### 0.0.7 (SNAPSHOT)
-* 
+### 0.1.0-pre
+* Re-stack to Hapi, Cluster2, NConf.
 
 ### 0.0.6
 * Add request body parsing for POST data
