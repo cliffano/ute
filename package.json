@@ -19,14 +19,15 @@
   },
   "dependencies": {
     "cluster2": "0.3.8",
-    "hapi": "0.14.2",
+    "hapi": "0.15.6",
+    "log4js": "0.6.0",
     "nconf": "0.6.7"
   },
   "devDependencies": {
     "buster": "0.6.12"
   },
   "engines": {
-    "node": ">= 0.6.0"
+    "node": ">= 0.8.0"
   },
   "licenses": [
     {
