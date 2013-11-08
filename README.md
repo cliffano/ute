@@ -9,7 +9,7 @@
 Ute
 ---
 
-Ute is a container for node.js web application.
+Ute is an unframework for node.js web application.
 
 Installation
 ------------

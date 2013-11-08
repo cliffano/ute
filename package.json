@@ -1,8 +1,8 @@
 {
   "name": "ute",
-  "description": "Container for node.js web application",
+  "description": "Unframework for node.js web application",
   "keywords": [
-    "container",
+    "unframework",
     "web application"
   ],
   "version": "0.1.0",
