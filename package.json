@@ -1,7 +1,10 @@
 {
   "name": "ute",
-  "description": "",
-  "keywords": [],
+  "description": "Container for node.js web application",
+  "keywords": [
+    "container",
+    "web application"
+  ],
   "version": "0.1.0",
   "homepage": "http://github.com/cliffano/ute",
   "author": "Cliffano Subagio <blah@cliffano.com> (http://blog.cliffano.com)",
@@ -18,13 +21,14 @@
     "test": "./test"
   },
   "dependencies": {
-    "cluster2": "0.3.8",
-    "hapi": "0.15.6",
-    "log4js": "0.6.0",
-    "nconf": "0.6.7"
+    "cluster2": "~0.4.22",
+    "express": "~3.4.4",
+    "log4js": "~0.6.9",
+    "nconf": "~0.6.8"
   },
   "devDependencies": {
-    "buster": "0.6.12"
+    "buster-node": "~0.7.0",
+    "referee": "~1.0.1"
   },
   "engines": {
     "node": ">= 0.8.0"

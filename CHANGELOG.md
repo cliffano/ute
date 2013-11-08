@@ -1,5 +1,5 @@
 ### 0.1.0-pre
-* Re-stack to Hapi, Cluster2, NConf.
+* Re-stack with express 3, cluster2, nconf, and log4js.
 
 ### 0.0.6
 * Add request body parsing for POST data
