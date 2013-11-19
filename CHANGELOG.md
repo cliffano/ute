@@ -1,5 +1,6 @@
 ### 0.1.0-pre
 * Re-stack with express 3, cluster2, nconf, and log4js.
+* Add pre and post tasks support, only executed on master
 
 ### 0.0.6
 * Add request body parsing for POST data
