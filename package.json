@@ -8,6 +8,9 @@
   "version": "0.1.0",
   "homepage": "http://github.com/cliffano/ute",
   "author": "Cliffano Subagio <blah@cliffano.com> (http://blog.cliffano.com)",
+  "contributors": [
+    "All contributors (https://github.com/cliffano/ute/graphs/contributors)"
+  ],
   "main": "./lib/ute",
   "repository": {
     "type": "git",
@@ -30,6 +33,7 @@
     "buster-node": "~0.7.0",
     "referee": "~1.0.1"
   },
+  "scripts": {},
   "engines": {
     "node": ">= 0.8.0"
   },
