@@ -28,7 +28,7 @@ buster.testCase('ute - ute', {
   },
   'should set env to UTE_ENV env variable when opts env is not specified': function () {
     this.mockNconf.expects('file').withExactArgs('conf/someuteenv.json');
-    this.stub(process, 'env', { UTE_ENV: 'someuteenv' })
+    this.stub(process, 'env', { UTE_ENV: 'someuteenv' });
     var ute = new Ute();
     assert.equals(ute.opts.confDir, 'conf');
     assert.equals(ute.opts.env, 'someuteenv');
