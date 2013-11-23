@@ -92,7 +92,7 @@ buster.testCase('ute - start master', {
     ];
 
     var ute = new Ute({ confDir: 'test/fixtures' });
-    var app = ute.start(this.handlers, { preTasks: preTasks, postTasks: postTasks })
+    var app = ute.start(this.handlers, { preTasks: preTasks, postTasks: postTasks });
 
     assert.isTrue(this.calls.preTask1);
     assert.isTrue(this.calls.preTask2);
@@ -137,10 +137,10 @@ buster.testCase('ute - start master', {
 
     var ute = new Ute({ confDir: 'test/inexistingdir' });
     ute.stop = function (err) {
-      assert.defined(err)
+      assert.defined(err);
       done();
     };
-    var app = ute.start(this.handlers, { preTasks: preTasks, postTasks: postTasks })
+    var app = ute.start(this.handlers, { preTasks: preTasks, postTasks: postTasks });
 
     assert.isTrue(this.calls.preTask1);
     assert.isTrue(this.calls.preTask2);
@@ -186,10 +186,10 @@ buster.testCase('ute - start master', {
 
     var ute = new Ute({ confDir: 'test/inexistingdir' });
     ute.stop = function (err) {
-      assert.defined(err)
+      assert.defined(err);
       done();
     };
-    var app = ute.start(this.handlers, { preTasks: preTasks, postTasks: postTasks })
+    var app = ute.start(this.handlers, { preTasks: preTasks, postTasks: postTasks });
 
     assert.isTrue(this.calls.preTask1);
     assert.isTrue(this.calls.preTask2);
@@ -250,7 +250,7 @@ buster.testCase('ute - start worker', {
       }
     };
     var ute = new Ute({ confDir: 'test/fixtures' });
-    var app = ute.start(handlers, { preTasks: preTasks, postTasks: postTasks })
+    var app = ute.start(handlers, { preTasks: preTasks, postTasks: postTasks });
 
     assert.equals(this.calls.preTask1, undefined);
     assert.equals(this.calls.preTask2, undefined);
@@ -271,10 +271,10 @@ buster.testCase('ute - start worker', {
     var handlers = {};
     var ute = new Ute({ confDir: 'test/fixtures' });
     ute.stop = function (err) {
-      assert.defined(err)
+      assert.defined(err);
       done();
     };
-    ute.start(handlers)
+    ute.start(handlers);
   }
 });
 
