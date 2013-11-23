@@ -11,18 +11,4 @@ Ute
 
 Ute is an unframework for node.js web application.
 
-Installation
-------------
-
-    npm install ute
-
-or specify it as a dependency in package.json file:
-
-    "dependencies": {
-      "ute": "x.y.z"
-    }
-
-Usage
------
-
-TODO
+This module is no longer maintained.
