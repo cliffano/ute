@@ -1,0 +1,4 @@
+[
+  { "path": "/path1", "method": "GET", "handler": "somehandler1" },
+  { "path": "/path2", "method": "GET", "handler": "somehandler2" }
+]
