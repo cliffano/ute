@@ -12,3 +12,5 @@ Ute
 Ute is an unframework for node.js web application.
 
 This module is no longer maintained.
+
+I've written a similar module at work, and refactored Ute several times as a side project outside of work. However, there are now a number of company-sponsored frameworks. The closest to Ute roadmap is [KrakenJS](http://krakenjs.com) as a suite of modules on top of Express. I'm bowing out on this one.
