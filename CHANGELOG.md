@@ -1,5 +1,8 @@
-### 0.1.0-pre
-* Re-stack with express 3, cluster2, nconf, and log4js.
+### 0.1.1-pre
+* Upgrade to express 4, drop cluster support for now
+
+### 0.1.0
+* Re-stack with express 3, cluster2, nconf, and log4js
 * Add pre and post tasks support, only executed on master
 * Routes config is now just a plain JSON
 

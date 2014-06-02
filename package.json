@@ -5,7 +5,7 @@
     "unframework",
     "web application"
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "http://github.com/cliffano/ute",
   "author": "Cliffano Subagio <blah@cliffano.com> (http://blog.cliffano.com)",
   "contributors": [
@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "ejs": "~1.0.0",
-    "express": "~4.3.2",
+    "express": "~4.4.0",
     "express-partials": "~0.2.0",
     "nconf": "~0.6.9"
   },
