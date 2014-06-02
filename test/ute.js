@@ -22,8 +22,8 @@ buster.testCase('ute - ute', {
   'should set custom opts when opts is provided': function () {
     this.mockNconf.expects('file').withExactArgs('someconf/someenv.json');
     var ute = new Ute({
-      confDir: 'someconf',
-      env: 'someenv',
+      confDir  : 'someconf',
+      env      : 'someenv',
       staticDir: 'somestatic'
     });
     assert.equals(ute.opts.confDir, 'someconf');
@@ -39,40 +39,51 @@ buster.testCase('ute - ute', {
     assert.equals(ute.opts.staticDir, 'public');
   }
 });
-/*
+
 buster.testCase('ute - start', {
   setUp: function () {
     this.mockConsole = this.mock(console);
-    this.mockFs = this.mock(fs);
-    this.mockNconf = this.mock(nconf);
-    this.calls = {};
-    this.handlers = {
-      'somehandler1': function (req, res, next) {
+    this.mockFs      = this.mock(fs);
+    this.mockNconf   = this.mock(nconf);
+  },
+  'should start the application on specified port': function () {
+
+    var self = this;
+
+    var mockApp = {
+      use   : function () {},
+      engine: function (ext, type) {
+        assert.equals(ext, '.html');
+        assert.isTrue(type !== null);
       },
-      'somehandler2': function (req, res, next) {
+      listen: function (port) {
+        assert.equals(port, 3000);
+      },
+      get   : function (path, handler) {
+        assert.equals(path, '/foo');
+        assert.isTrue(handler !== null);
       }
     };
-  },
-  'should start master and execute pre and post tasks': function () {
-    this.stub(cluster, 'isMaster', 'foobar');
-    this.stub(process, 'pid', 1234);
+    var mockExpress = function () {
+      return mockApp;
+    };
+    mockExpress.static = function (dir) {
+      assert.equals(dir, 'somestaticdir');
+    };
+    var handlers = {
+      somehandler: function () {}
+    };
 
+    this.mockNconf.expects('file').withExactArgs('test/fixtures/local.json');
     this.mockNconf.expects('get').withExactArgs('app:name').returns('someapp');
     this.mockNconf.expects('get').twice().withExactArgs('app:port').returns(3000);
-    this.mockNconf.expects('get').withExactArgs('app:workers').returns(3);
-    this.mockNconf.expects('get').withExactArgs('app:pidsDir').returns('somepids');
-
     this.mockConsole.expects('log').withExactArgs('Starting application %s on port %d', 'someapp', 3000);
-    this.mockConsole.expects('log').withExactArgs('Master is running on pid %d', 1234);
+    this.mockFs.expects('readFileSync').withExactArgs('test/fixtures/routes.json')
+        .returns('[{ "method": "GET", "path": "/foo", "handler": "somehandler" }]');
 
-    var ute = new Ute({ confDir: 'test/fixtures' });
-    var app = ute.start(this.handlers, { preTasks: preTasks, postTasks: postTasks });
+    var ute = new Ute({ confDir: 'test/fixtures', staticDir: 'somestaticdir' });
+    var app = ute.start(handlers, { express: mockExpress });
 
-    assert.isTrue(this.calls.preTask1);
-    assert.isTrue(this.calls.preTask2);
-    assert.isTrue(this.calls.postTask1);
-    assert.isTrue(this.calls.postTask2);
-    assert.isTrue(this.calls.done);
+    assert.equals(app, mockApp);
   }
 });
-*/
