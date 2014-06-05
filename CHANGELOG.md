@@ -1,5 +1,6 @@
 ### 0.1.1-pre
-* Upgrade to express 4, drop cluster support for now
+* Upgrade to express 4
+* Remove cluster support 
 
 ### 0.1.0
 * Re-stack with express 3, cluster2, nconf, and log4js
