@@ -1,5 +1,5 @@
 ### 0.1.2-pre
-*
+* Set min node engine to >= v0.10.0
 
 ### 0.1.1
 * Upgrade to express 4
