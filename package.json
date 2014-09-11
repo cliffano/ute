@@ -25,8 +25,8 @@
   },
   "dependencies": {
     "ejs": "~1.0.0",
-    "express": "~4.4.0",
-    "express-partials": "~0.2.0",
+    "express": "~4.9.0",
+    "express-partials": "~0.3.0",
     "nconf": "~0.6.9"
   },
   "devDependencies": {
