@@ -1,5 +1,6 @@
 ### 0.1.2-pre
 * Set min node engine to >= v0.10.0
+* Add connect-domain to trap any unexpected error
 
 ### 0.1.1
 * Upgrade to express 4
