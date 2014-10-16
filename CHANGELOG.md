@@ -1,4 +1,7 @@
-### 0.1.2-pre
+### 0.1.3-pre
+*
+
+### 0.1.2
 * Set min node engine to >= v0.10.0
 * Add connect-domain to trap any unexpected error
 
