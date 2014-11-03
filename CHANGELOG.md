@@ -1,5 +1,5 @@
 ### 0.1.3-pre
-*
+* Fix unexpected error handler
 
 ### 0.1.2
 * Set min node engine to >= v0.10.0
