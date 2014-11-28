@@ -87,3 +87,8 @@ Set routes path and handler mappings in conf/routes.json:
       { "method": "GET", "path": "/", "handler": "home" },
       { "method": "POST", "path": "/data", "handler": "data" }
     ]
+
+Colophon
+--------
+
+[Developer's Guide](http://cliffano.github.io/developers_guide.html#nodejs)
