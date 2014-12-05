@@ -3,6 +3,7 @@ var ejs        = require('ejs');
 var express    = require('express');
 var partials   = require('express-partials');
 var fs         = require('fs');
+var log4js     = require('log4js');
 var nconf      = require('nconf');
 var proxyquire = require('proxyquire');
 var referee    = require('referee');
@@ -68,6 +69,7 @@ buster.testCase('ute - start', {
 
     this.mockConsole = this.mock(console);
     this.mockFs      = this.mock(fs);
+    this.mockLog4js  = this.mock(log4js);
     this.mockNconf   = this.mock(nconf);
   },
   'should start the application on specified port': function () {
@@ -81,6 +83,7 @@ buster.testCase('ute - start', {
     this.mockNconf.expects('get').withExactArgs('app:name').returns('someapp');
     this.mockNconf.expects('get').twice().withExactArgs('app:port').returns(3000);
     this.mockConsole.expects('log').withExactArgs('Starting application %s on port %d', 'someapp', 3000);
+    this.mockLog4js.expects('configure').withExactArgs('test/fixtures/local-log4js.json');
     this.mockFs.expects('readFileSync').withExactArgs('test/fixtures/routes.json')
         .returns('[{ "method": "GET", "path": "/foo", "handler": "somehandler" }]');
 

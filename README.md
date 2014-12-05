@@ -81,6 +81,23 @@ Set application name and port in conf/<env>.json:
       }
     }
 
+Set [log4js](http://github.com/nomiddlename/log4js-node) configuration in conf/<env>-log4js.json, e.g.
+
+    {
+      "appenders": [
+        {
+          "type": "console"
+        },
+        {
+          "type": "file",
+          "filename": "someapp.log",
+          "maxLogSize": 10240000,
+          "backups": 10
+        }
+      ],
+      "replaceConsole": true
+    }
+
 Set routes path and handler mappings in conf/routes.json:
 
     [
