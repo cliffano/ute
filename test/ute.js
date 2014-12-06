@@ -15,30 +15,22 @@ buster.testCase('ute - ute', {
     this.mockNconf = this.mock(nconf);
   },
   'should set default opts when opts is not provided': function () {
-    this.mockNconf.expects('file').withExactArgs('conf/local.json');
+    this.mockNconf.expects('file').withExactArgs('conf/ute.json');
     var ute = new Ute();
-    assert.equals(ute.opts.confDir, 'conf');
-    assert.equals(ute.opts.env, 'local');
+    assert.equals(ute.opts.appConfDir, 'conf');
+    assert.equals(ute.opts.envConfDir, 'conf');
     assert.equals(ute.opts.staticDir, 'public');
   },
   'should set custom opts when opts is provided': function () {
-    this.mockNconf.expects('file').withExactArgs('someconf/someenv.json');
+    this.mockNconf.expects('file').withExactArgs('someenvconf/ute.json');
     var ute = new Ute({
-      confDir  : 'someconf',
-      env      : 'someenv',
-      staticDir: 'somestatic'
+      appConfDir: 'someappconf',
+      envConfDir: 'someenvconf',
+      staticDir : 'somestatic'
     });
-    assert.equals(ute.opts.confDir, 'someconf');
-    assert.equals(ute.opts.env, 'someenv');
+    assert.equals(ute.opts.appConfDir, 'someappconf');
+    assert.equals(ute.opts.envConfDir, 'someenvconf');
     assert.equals(ute.opts.staticDir, 'somestatic');
-  },
-  'should set env to UTE_ENV env variable when opts env is not specified': function () {
-    this.mockNconf.expects('file').withExactArgs('conf/someuteenv.json');
-    this.stub(process, 'env', { UTE_ENV: 'someuteenv' });
-    var ute = new Ute();
-    assert.equals(ute.opts.confDir, 'conf');
-    assert.equals(ute.opts.env, 'someuteenv');
-    assert.equals(ute.opts.staticDir, 'public');
   }
 });
 
@@ -79,15 +71,15 @@ buster.testCase('ute - start', {
       somehandler: function () {}
     };
 
-    this.mockNconf.expects('file').withExactArgs('test/fixtures/local.json');
+    this.mockNconf.expects('file').withExactArgs('test/fixtures/ute.json');
     this.mockNconf.expects('get').withExactArgs('app:name').returns('someapp');
     this.mockNconf.expects('get').twice().withExactArgs('app:port').returns(3000);
     this.mockConsole.expects('log').withExactArgs('Starting application %s on port %d', 'someapp', 3000);
-    this.mockLog4js.expects('configure').withExactArgs('test/fixtures/local-log4js.json');
+    this.mockLog4js.expects('configure').withExactArgs('test/fixtures/log4js.json');
     this.mockFs.expects('readFileSync').withExactArgs('test/fixtures/routes.json')
         .returns('[{ "method": "GET", "path": "/foo", "handler": "somehandler" }]');
 
-    var ute = new this.Ute({ confDir: 'test/fixtures', staticDir: 'somestaticdir' });
+    var ute = new this.Ute({ appConfDir: 'test/fixtures', envConfDir: 'test/fixtures', staticDir: 'somestaticdir' });
     var app = ute.start(handlers);
 
     assert.equals(app, this.mockApp);

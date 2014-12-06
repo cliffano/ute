@@ -1,5 +1,6 @@
 ### 0.1.5-pre
-*
+* Modify configuration loading to support separate application and environment configuration directories
+* Remove UTE_ENV environment variable
 
 ### 0.1.4-pre
 * Add logging support using log4js
