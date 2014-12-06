@@ -1,4 +1,7 @@
-### 0.1.5-pre
+### 0.1.6-pre
+*
+
+### 0.1.5
 * Modify configuration loading to support separate application and environment configuration directories
 * Remove UTE_ENV environment variable
 
