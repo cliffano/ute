@@ -1,4 +1,7 @@
-### 0.1.6-pre
+### 0.1.7-pre
+*
+
+### 0.1.6
 * Add uncaughtException event handling
 
 ### 0.1.5
