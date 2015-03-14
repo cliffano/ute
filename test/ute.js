@@ -63,6 +63,7 @@ buster.testCase('ute - start', {
     this.mockFs      = this.mock(fs);
     this.mockLog4js  = this.mock(log4js);
     this.mockNconf   = this.mock(nconf);
+    this.mockProcess = this.mock(process);
   },
   'should start the application on specified port': function () {
 
@@ -70,6 +71,10 @@ buster.testCase('ute - start', {
     var handlers = {
       somehandler: function () {}
     };
+
+    this.mockConsole.expects('error').withExactArgs('Uncaught exception: some error');
+    this.mockConsole.expects('trace').withExactArgs();
+    this.mockProcess.expects('on').withArgs('uncaughtException').callsArgWith(1, new Error('some error'));
 
     this.mockNconf.expects('file').withExactArgs('test/fixtures/ute.json');
     this.mockNconf.expects('get').withExactArgs('app:name').returns('someapp');

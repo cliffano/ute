@@ -1,5 +1,5 @@
 ### 0.1.6-pre
-*
+* Add uncaughtException event handling
 
 ### 0.1.5
 * Modify configuration loading to support separate application and environment configuration directories
