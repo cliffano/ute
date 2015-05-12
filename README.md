@@ -1,7 +1,7 @@
 <img align="right" src="https://raw.github.com/cliffano/ute/master/avatar.jpg" alt="Avatar"/>
 
-[![Build Status](https://secure.travis-ci.org/cliffano/ute.png?branch=master)](http://travis-ci.org/cliffano/ute)
-[![Dependencies Status](https://david-dm.org/cliffano/ute.png)](http://david-dm.org/cliffano/ute)
+[![Build Status](https://img.shields.io/travis/cliffano/ute.svg)](http://travis-ci.org/cliffano/ute)
+[![Dependencies Status](https://img.shields.io/david/cliffano/ute.svg)](http://david-dm.org/cliffano/ute)
 [![Coverage Status](https://coveralls.io/repos/cliffano/ute/badge.png?branch=master)](https://coveralls.io/r/cliffano/ute?branch=master)
 [![Published Version](https://badge.fury.io/js/ute.png)](http://badge.fury.io/js/ute)
 <br/>
