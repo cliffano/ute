@@ -2,8 +2,8 @@
 
 [![Build Status](https://img.shields.io/travis/cliffano/ute.svg)](http://travis-ci.org/cliffano/ute)
 [![Dependencies Status](https://img.shields.io/david/cliffano/ute.svg)](http://david-dm.org/cliffano/ute)
-[![Coverage Status](https://coveralls.io/repos/cliffano/ute/badge.png?branch=master)](https://coveralls.io/r/cliffano/ute?branch=master)
-[![Published Version](https://badge.fury.io/js/ute.png)](http://badge.fury.io/js/ute)
+[![Coverage Status](https://img.shields.io/coveralls/cliffano/ute.svg)](https://coveralls.io/r/cliffano/ute?branch=master)
+[![Published Version](https://img.shields.io/npm/v/ute.svg)](http://www.npmjs.com/package/ute)
 <br/>
 [![npm Badge](https://nodei.co/npm/ute.png)](http://npmjs.org/package/ute)
 
