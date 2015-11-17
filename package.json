@@ -25,15 +25,15 @@
   },
   "dependencies": {
     "connect-domain": "^0.5.0",
-    "ejs": "^2.3.1",
-    "express": "^4.12.3",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
     "express-partials": "^0.3.0",
-    "log4js": "^0.6.24",
-    "nconf": "^0.7.1"
+    "log4js": "^0.6.27",
+    "nconf": "^0.8.2"
   },
   "devDependencies": {
     "buster-node": "^0.7.1",
-    "proxyquire": "^1.4.0",
+    "proxyquire": "^1.7.3",
     "referee": "^1.1.1"
   },
   "scripts": {},
